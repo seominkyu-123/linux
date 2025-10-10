@@ -1,16 +1,21 @@
-all: diary
+LNAME = TEST
+LNAME = SEO
+FNAME = MINKYU
 
-diary: memo.o calendar.o main.o
-	gcc -o diary memo.o calendar.o main.o
+LNAME += MANSOO
 
-memo.o: memo.c
-	gcc -Wall -Wextra -c -o memo.o memo.c
+NAME = '"SEO"'
 
-calendar.o: calendar.c
-	gcc -Wall -Wextra -c -o calendar.o calendar.c
+A = $(B) AA
+B = BB
 
-main.o: main.c
-	gcc -Wall -Wextra -c -o main.o main.c
+a := $(b) aa
+b := bb
 
-clean:
-	rm -rf *.o diary
+all:
+	@echo $(NAME)
+#	@echo A= $(A)
+#	@echo a= $(a)
+#	@echo LNAME= $(LNAME)
+#	@echo ${LANME}, $(FNAME)
+#	@echo MR. $(LNAME)
