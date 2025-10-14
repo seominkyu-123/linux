@@ -1,5 +1,4 @@
-SRCS = $(wildcard *.c)
-OBJECTS = $(SRCS: .c=.o)
+OBJECTS = memo.o calendar.o main.o
 CFLAGS = -Wall -Wextra
 TARGET = diary
 
